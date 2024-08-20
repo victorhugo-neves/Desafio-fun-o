@@ -1,12 +1,20 @@
-let nome = "Seunome";
-let nivel = 7500;
+function calcularRankeadas(vitorias, derrotas) {
 
-    if (nivel <=10 ) { console.log("voce esta no nivel ferro")}
-    else if (nivel >11 <=20) { console.log("voce esta no nivel bronze")}
-	else if (nivel >21 && nivel <=50) { console.log("voce esta no nivel prata")}
-	else if (nivel >51 && nivel <=80) { console.log("voce esta no nivel ouro")}
-	else if (nivel >81 && nivel <=90) { console.log("voce esta no nivel plaina") }
-	else if (nivel >91 && nivel <=100) { console.log("voce esta no nivel imortal")}
-    else { console.log("voce esta no nivel radiante") } 
+	let saldoVitorias = vitorias - derrotas;
+	let nivel;
 
-console.log ( "o heroi tem um saldo de: " + nome + "esta no nivel de:" + nivel )
+	    if ( vitorias<=10 ) {nivel = "ferro" }
+    	else if ( vitorias>= 11 && vitorias<=20) {nivel = "bronze"}
+		else if ( vitorias>= 21 &&  vitorias<=50) {nivel = "prata"}
+		else if ( vitorias>= 51 &&  vitorias<=80) {nivel = "ouro"}
+		else if ( vitorias>= 81 &&  vitorias<=90) {nivel = "diamante" }
+		else if ( vitorias>= 91 &&  vitorias<=100) {nivel = "lendário" }
+	    else if (vitorias >=100) {nivel = "imortal"} 
+
+console.log ( "o heroi tem um saldo de: " + saldoVitorias + " esta no nivel de: " + nivel )
+}
+
+	let vitorias = 298;
+	let derrotas = 114;
+
+calcularRankeadas(vitorias, derrotas)
